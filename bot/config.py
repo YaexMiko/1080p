@@ -28,7 +28,7 @@ class Config:
             self.APP_ID = config("APP_ID", "24828197")
             self.API_HASH = config("API_HASH", "d36e278e89ebeb900aeda4128d413a77")
             self.ARIA2_PORT = config("ARIA2_PORT", default=6800, cast=int)
-            self.BOT_TOKEN = config("BOT_TOKEN", "7741127419:AAErq_RZ9wlZTfa3eO_lcDaOuGqL5iye59w")
+            self.BOT_TOKEN = config("BOT_TOKEN", "7647343387:AAGFy8JkObvXDPsHrGhtH30AbfW1mnhn7FI")
             self.CACHE_DL = config("CACHE_DL", default=False, cast=bool)
             self.CAP_DECO = config("CAP_DECO", default="◉")
             self.C_LINK = config("C_LINK", default="@ANi_MiNE")
@@ -50,7 +50,7 @@ class Config:
             self.FCODEC = config("FCODEC", default=None)
             self.FFMPEG = config(
                 "FFMPEG",
-                default='ffmpeg -i "{}" -preset ultrafast -c:v libx265 -crf 27 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
+                default='ffmpeg -i "{}" -preset fast -c:v libx264 -crf 26 -vf "scale=1920:1080" -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
             )
             self.FFMPEG2 = config("FFMPEG2", default=None)
             self.FFMPEG3 = config("FFMPEG3", default=None)
@@ -89,7 +89,7 @@ class Config:
             self.TEMP_USER = config("TEMP_USERS", default=str())
             self.TG_DL_CLIENT = config("TG_DL_CLIENT", default="pyrogram")
             self.TG_UL_CLIENT = config("TG_UL_CLIENT", default="pyrogram")
-            self.THUMB = config("THUMBNAIL", default=None)
+            self.THUMB = config("THUMBNAIL", "https://telegra.ph/file/e0f9058af7071cb386cef-3de355b299379337cb.jpg")
             self.UN_FINISHED_PROGRESS_STR = config(
                 "UN_FINISHED_PROGRESS_STR", default="🤍"
             )
